@@ -1,0 +1,20 @@
+[package]
+name = "deepseek-app"
+version = "0.1.0"
+description = "DeepSeek web wrapper desktop app"
+authors = ["alvin"]
+edition = "2021"
+build = "build.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["image-png"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+# this feature is used for production builds where `devUrl` is disabled
+# and the IPC is using the production domain
+custom-protocol = ["tauri/custom-protocol"]
