@@ -30,7 +30,8 @@
     "active": true,
     "targets": ["deb", "msi", "dmg", "app"],
     "icon": [
-      "icons/icon.png"
+      "icons/icon.png",
+      "icons/icon.ico"
     ],
     "category": "Utility",
     "shortDescription": "DeepSeek web wrapper desktop app",
